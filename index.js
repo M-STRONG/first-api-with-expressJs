@@ -7,6 +7,9 @@ app.use(express.json());
 
 const data = fs.readFileSync("./users.json", "utf8");
 const users = JSON.parse(data);
+app.get("/", (req, res) => {
+  res.send("Welecom To my First api ");
+});
 // Filter get all users
 app.get("/users", (req, res) => {
   res.send(users);
