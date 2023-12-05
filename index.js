@@ -8,7 +8,7 @@ app.use(express.json());
 const data = fs.readFileSync("./users.json", "utf8");
 const users = JSON.parse(data);
 app.get("/", (req, res) => {
-  res.send("<h1>Welcome To my First API</h1> /users - get all users <br>\n/users/first - get the first <br> user /users/last - get the last user <br> /users/by_id/:id - get user by ID <br> /users/bystreet/:street - get user by street <br> /users/add - add a new user <br> /users/delete/:id - delete user by ID <br> /users/update/:id - update user by ID");
+  res.send("<h1>Welcome To my First API</h1> /users - get all users <br>\n/users/first - get the first <br> user /users/last - get the last user <br> /users/by_id/:id - get user by ID <br> /users/bystreet/:street - get user by street <br> /users/add - add a new user <br> /users/delete/:id - delete user by ID <br> /users/update/:id - update user by ID /users/byname/:name search by name <br> /users/bycity/:city search by city <br>/users/byusername/:username search by username  ");
 });
 
 // Filter get all users
